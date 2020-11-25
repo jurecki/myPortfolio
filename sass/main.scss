@@ -1,9 +1,24 @@
-* {
-margin:0;
-padding: 0;
-box-sizing: border-box;
-}
+@import 'utils/functions';
+@import 'utils/mixins';
+@import 'utils/variables';
 
-p {
-	color: red;
-}
+@import 'base/base';
+@import 'base/animation';
+@import 'base/typography';
+
+@import 'components/button';
+@import 'components/card';
+@import 'components/form';
+
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'pages/home';
+
+
+
+	
+	
+	
+	
+	
+
