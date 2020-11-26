@@ -31,8 +31,8 @@
     </div>
     <section id='home' class='home'>
         <div class='home__text'>
-            <h1 class='home__title home__title-small'>welcome!</h1>
-            <h2 class='home__title home__title-large'>I Am Web Developer</h2>
+            <h1 class='heading'>welcome!</h1>
+            <h2 class='heading-secondary'>I Am Web Developer</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quas natus blanditiis dolorem delectus distinctio possimus obcaecati ipsam illum.</p>
             <div class='home__social'>
                 <i class="fa fa-github"></i>
@@ -51,7 +51,7 @@
             <img src='./photo/photo_1.jpg' alt='photo'/>
         </div>
         <div class='about__text'>
-            <h1 class='about__title'>Hello, I Am Pawel Jurecki</h1>
+            <h1 class='heading-secondary'>Hello, I Am Pawel Jurecki</h1>
             <p class='about__describe'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae reprehenderit, iure mollitia aut accusantium rerum blanditiis assumenda ipsum, temporibus velit culpa magnam non enim possimus eum omnis harum error. Nulla. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga repudiandae vitae quos minima molestiae maxime dolorum suscipit eaque tenetur! Ratione dicta libero iste saepe magnam, commodi quisquam unde inventore ipsa.</p>
             <div class='about__skills'>
                 <div class='progress-bar'>
@@ -114,24 +114,61 @@
     </section>
     <section id='courses' class='courses'>
         <div class='courses__title '>
-            <h1 class='heading-secondary'>my courses</h1>
+            <h1 class='heading'>my courses</h1>
         </div>
         <div class='courses__content'>
             <div class='card'>
-                <div class='card__side card__side--front'>FRONT</div>
-                <div class='card__side card__side--back'>BACK</div>
+                <div class='card__side card__side--front '>
+                    <img class='courses__logo' src='./photo/kodilla_logo.png' alt='kodilla_szkola_programowania'/>
+                </div>
+                <div class='card__side card__side--back'>
+                    <p class='card__content'>HTML, CSS, RWD, Bootstrap, Git, JavaScript ES6, AJAX, Node, React, Express, Redux, React Router, MongoDB, Jira, Kanban, NPM, Webpack</p>
+                    <a href='#' class='btn btn-secondary'>show certificate</a>
+                </div>
             </div>
             <div class='card'>
-                <div class='card__side card__side--front card__side--front--1'>FRONT</div>
-                <div class='card__side card__side--back card__side--back--1'>BACK</div>
+                <div class='card__side card__side--front '>
+                    <img class='courses__logo' src='./photo/coderscamp_min_1030x578.jpg' alt='coders_camp_szkola_programowania'/>
+                </div>
+                <div class='card__side card__side--back card__side--back--1'>
+                    <p class='card__content'>
+                        HTML,  CSS, JavaScript, TypeScript, Node.js, REST API, React, wzorce projektowe i architektura oprogramowania, Architektura w React.js i Redux.
+                    </p>
+                    <a href='#' class='btn btn-secondary'>show certificate</a>
+                </div>
             </div>
             <div class='card'>
-                <div class='card__side card__side--front'>FRONT</div>
-                <div class='card__side card__side--back'>BACK</div>
+                <div class='card__side card__side--front'>
+                    <img class='courses__logo' src='./photo/samuraj_logo.png' alt='sammuraj_programowania'/>
+                </div>
+                <div class='card__side card__side--back'>
+                    <p class='card__content'>
+                        Front-end advanced in 15 days, Programming in Java Script, Basic React, Node.js, Express i MongoDB
+                    </p>
+                    <a href='#' class='btn btn-secondary'>show certificate</a>
+                </div>
             </div>
         </div>
     </section>
-    <section id='porfolio' class='portfolio'> portolio </section>
+    <section id='porfolio' class='portfolio'> 
+        <div class='portfolio__title '>
+            <h1 class='heading'>portfolio</h1>
+        </div>
+        <div class='portfolio__content'>
+            <a href='#' class='portfolio__category-all btn btn-category'>All</a>
+            <a href='#' class='portfolio__category-business btn btn-category'>Business & Services</a>
+            <a href='#' class='portfolio__category-design btn btn-category'>Design & Photography</a>
+            <a href='#' class='portfolio__category-cars btn btn-category'>Cars & Motorcycles</a>
+            <div class='portfolio__item'>
+                <img class='portfolio__item-cars' src='./photo/example-1.png' alt=''>
+                <img class='portfolio__item-design' src='./photo/example-2.png' alt=''>
+                <img class='portfolio__item-business' src='./photo/example-3.png' alt=''>
+                <img class='portfolio__item-cars' src='./photo/example-4.png' alt=''>
+                <img class='portfolio__item-design' src='./photo/example-5.png' alt=''>
+                <img class='portfolio__item-business' src='./photo/example-6.png' alt=''>
+            </div>
+        </div>
+     </section>
     <section id='contact' class='contact'> contact </section>
     <footer class='footer'></footer>
 </body>

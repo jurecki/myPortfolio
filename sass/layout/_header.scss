@@ -15,7 +15,10 @@
 		font-family: 'Russo One', sans-serif;
 		color: $color-primary;
 		font-size: 3rem;
-		padding: 0.5rem 2rem;
+		padding: 0.5rem 4rem;
+		background-image: linear-gradient(to right, $color-primary-dark, $color-secondary-dark);
+		-webkit-background-clip: text;
+		color: transparent;
 	}
 
 	&__menu {

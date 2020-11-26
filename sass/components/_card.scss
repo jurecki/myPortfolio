@@ -19,14 +19,15 @@
 
 		&--front {
 			background-color: white;
+			position: relative;
 		}
 		&--back {
-			background-image: linear-gradient($color-primary, $color-primary-dark);
+			background-image: linear-gradient(135deg, $color-primary, $color-secondary);
 			transform: rotateY(180deg);
-
-			&--1 {
-				background-image: linear-gradient($color-primary, $color-secondary-dark)
-			}
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 		}
 	}
 
@@ -36,5 +37,11 @@
 
 	&:hover &__side--back {
 		transform: rotateY(0);
+	}
+
+	&__content {
+		margin: 2rem 2rem 4rem 2rem;
+		font-size: 2rem;
+		text-align: center;
 	}
 }

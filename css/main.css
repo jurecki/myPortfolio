@@ -91,11 +91,25 @@ body {
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 2rem;
   line-height: 1.7;
   color: #2c3e50;
   padding: 3rem;
   box-sizing: border-box;
+}
+
+.heading {
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  background-image: linear-gradient(45deg, #2980b9, #16a085);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.heading-secondary {
+  font-size: 4rem;
 }
 
 .btn:link, .btn:visited {
@@ -120,8 +134,22 @@ body {
 }
 
 .btn-primary {
-  background-color: #3498db;
+  background-image: linear-gradient(to right, #2980b9, #16a085);
   color: #ecf0f1;
+}
+
+.btn-secondary {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+}
+
+.btn-category {
+  background-color: #2980b9;
+  font-size: 1.2rem;
+  padding: 1.5rem 1rem;
+  margin: 0 1rem;
+  color: #ecf0f1;
+  text-align: center;
 }
 
 .progress-bar {
@@ -161,7 +189,7 @@ body {
   width: 100%;
   height: 100%;
   transform: translateX(-98%);
-  background-color: #2980b9;
+  background-image: linear-gradient(65deg, #2980b9, #16a085);
 }
 
 .progress-bar__title:hover + .progress-bar__chart .progress-bar__chart-html {
@@ -224,15 +252,20 @@ body {
 
 .card__side--front {
   background-color: white;
+  position: relative;
 }
 
 .card__side--back {
-  background-image: linear-gradient(#3498db, #2980b9);
+  background-image: linear-gradient(135deg, #3498db, #1abc9c);
   transform: rotateY(180deg);
-}
-
-.card__side--back--1 {
-  background-image: linear-gradient(#3498db, #16a085);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 .card:hover .card__side--front {
@@ -241,6 +274,12 @@ body {
 
 .card:hover .card__side--back {
   transform: rotateY(0);
+}
+
+.card__content {
+  margin: 2rem 2rem 4rem 2rem;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .header {
@@ -265,7 +304,10 @@ body {
   font-family: 'Russo One', sans-serif;
   color: #3498db;
   font-size: 3rem;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 4rem;
+  background-image: linear-gradient(to right, #2980b9, #16a085);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .header__menu {
@@ -303,6 +345,7 @@ body {
 .navigation__link {
   color: #2c3e50;
   text-decoration: none;
+  font-weight: 400;
 }
 
 .footer {
@@ -324,17 +367,6 @@ body {
 .home__text {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
-  font-size: 2rem;
-}
-
-.home__title-small {
-  color: #2980b9;
-  text-transform: uppercase;
-  font-size: 4rem;
-}
-
-.home__title-large {
-  font-size: 5rem;
 }
 
 .home__social {
@@ -389,10 +421,6 @@ body {
   padding-right: 2rem;
 }
 
-.about__title {
-  font-size: 3rem;
-}
-
 .about__describe {
   font-size: 1.8rem;
   padding: 2rem 0;
@@ -403,15 +431,101 @@ body {
   text-align: center;
 }
 
-.courses {
-  background-color: orange;
-  height: 400px;
+.courses__title {
+  margin: 6rem 0;
+  text-align: center;
 }
 
-.portfolio {
-  padding-top: 6rem;
-  background-color: green;
-  height: 400px;
+.courses__content {
+  margin: 6rem 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.courses img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto auto;
+  width: 75%;
+}
+
+.portfolio__title {
+  margin: 6rem 0;
+  text-align: center;
+}
+
+.portfolio__content {
+  margin: 6rem 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.portfolio__content a {
+  width: 20%;
+  margin-bottom: 5rem;
+}
+
+.portfolio__content img {
+  width: 30%;
+  visibility: hidden;
+  box-shadow: 1.5rem 1.5rem 1rem rgba(44, 62, 80, 0.15);
+}
+
+.portfolio__item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.portfolio__item img {
+  margin-bottom: 5rem;
+}
+
+.portfolio__category-all:hover ~ .portfolio__item .portfolio__item-business {
+  visibility: visible;
+}
+
+.portfolio__category-all:hover ~ .portfolio__item .portfolio__item-cars {
+  visibility: visible;
+}
+
+.portfolio__category-all:hover ~ .portfolio__item .portfolio__item-design {
+  visibility: visible;
+}
+
+.portfolio__category-business:hover ~ .portfolio__item .portfolio__item-business {
+  visibility: visible;
+  -ms-flex-order: -1;
+      order: -1;
+}
+
+.portfolio__category-cars:hover ~ .portfolio__item .portfolio__item-cars {
+  visibility: visible;
+  -ms-flex-order: -1;
+      order: -1;
+}
+
+.portfolio__category-design:hover ~ .portfolio__item .portfolio__item-design {
+  visibility: visible;
+  -ms-flex-order: -1;
+      order: -1;
 }
 
 .contact {
