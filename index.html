@@ -7,23 +7,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>CodersCamp | Projekt 1 - HTML i CSS</title>
     <meta name="description" content="myPorfolio">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">  
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css"/>
 </head>
 
 <body>
-<div class='wrapper'>
     <div class='header'>
-        <div class='logo'>logo</div>
-        <nav class='menu'>nav</nav>
+        <div class='header__logo'>&lt; JURECKI/ &gt;</div>
+        <div class='header__menu'>
+            <nav class='navigation'>
+                <ul class='navigation__list'>
+                    <li class='navigation__item'><a href='#home' class='navigation__link'>home</a></li>
+                    <li class='navigation__item'><a href='#about' class='navigation__link'>about</a></li>
+                    <li class='navigation__item'><a href='#courses' class='navigation__link'>courses</a></li>
+                    <li class='navigation__item'><a href='#portfolio' class='navigation__link'>portfolio</a></li>
+                    <li class='navigation__item'><a href='#contact' class='navigation__link'>contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
-    <section id='home' class='main'>home</section>
-    <section id='about' class='about'>about</section>
+    <section id='home' class='home'>
+        <div class='home__text'>
+            <h1 class='home__title home__title-small'>welcome!</h1>
+            <h2 class='home__title home__title-large'>I Am Web Developer</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quas natus blanditiis dolorem delectus distinctio possimus obcaecati ipsam illum.</p>
+            <div class='home__social'>
+                <i class="fa fa-github"></i>
+                <i class="fa fa-linkedin"></i>
+                <i class="fa fa-twitter-square"></i>
+                <i class="fa fa-facebook"></i>
+               
+            </div>
+        </div>
+        <div class='home__picture'>
+            <img src='./photo/photo_2.jpg' alt='photo'/>
+
+        </div>
+    </section>
+    <section id='about' class='about'>
+        <div class='about__picture'>
+            <img src='./photo/photo_1.jpg' alt='photo'/>
+        </div>
+        <div class='about__text'>
+            <h1 class='about__title'>Hello, I Am Pawel Jurecki</h1>
+            <p class='about__describe'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae reprehenderit, iure mollitia aut accusantium rerum blanditiis assumenda ipsum, temporibus velit culpa magnam non enim possimus eum omnis harum error. Nulla. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga repudiandae vitae quos minima molestiae maxime dolorum suscipit eaque tenetur! Ratione dicta libero iste saepe magnam, commodi quisquam unde inventore ipsa.</p>
+            <div class='about__skills'>
+                <div class='progress-bar'>
+                    <div class='progress-bar__title'>HTML</div>
+                    <div class='progress-bar__chart'></div>
+                </div>
+            </div>
+            <a class='button'>Download CV</a>
+        </div>
+    </section>
     <section id='courses' class='courses'>courses</section>
     <section id='porfolio' class='portfolio'> portolio </section>
     <section id='contact' class='contact'> contact </section>
     <footer class='footer'></footer>
-</div>
 </body>
 </html>
  

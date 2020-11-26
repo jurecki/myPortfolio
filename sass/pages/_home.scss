@@ -1,0 +1,96 @@
+.home {
+	padding-top: 6rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&__text {
+		background-color: red;
+		flex-basis: 50%;
+		font-size: 2rem;
+	}
+
+	&__title {
+		
+		&-small {
+			color: $color-primary-dark;
+			text-transform: uppercase;
+			font-size: 4rem;
+		}
+
+		&-large {
+			font-size: 5rem;
+		}
+	}
+
+	&__social {
+		display: flex;
+		width: 50%;
+		margin-top: 2rem;
+		justify-content: space-around;
+	
+
+		& i {
+			font-size: 4rem;
+			color: $color-primary-dark;
+
+			&:hover {
+				color: $color-primary;
+				cursor: pointer;
+			}
+		}
+	}
+
+	&__picture {
+		& img {
+			height: 650px;
+			object-fit: cover;
+		}
+	}
+}
+
+.about {
+	padding-top: 6rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__picture {
+		
+		flex-basis: 50%;
+		align-self: flex-end;
+		& img {
+			height: 650px;
+			object-fit: cover;
+		}
+	}
+	&__text {
+		flex-grow: 1;
+		padding-right: 2rem;
+	}
+
+	&__title {
+		font-size: 3rem;
+	}
+
+	&__describe {
+		font-size: 1.8rem;
+		padding: 2rem 0;
+	}
+}
+
+.courses{
+	background-color: orange;
+	height: 400px;
+}
+
+.portfolio {
+	padding-top: 6rem;
+	background-color: green;
+	height: 400px;
+}
+
+.contact {
+	padding-top: 6rem;
+	background-color: gray;
+	height: 400px;
+}

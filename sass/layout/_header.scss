@@ -1,0 +1,23 @@
+.header {
+	position: fixed;
+	top: 0;
+	left:0;
+	width: 100%;
+	padding:0 2rem;
+	box-shadow: 0 1rem 2rem rgba($color-dark, .25);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
+	&__logo {
+		font-family: 'Russo One', sans-serif;
+		color: $color-primary;
+		font-size: 3rem;
+		padding: 1rem 2rem;
+	}
+
+	&__menu {
+		flex-grow: 1;
+	}
+}
+

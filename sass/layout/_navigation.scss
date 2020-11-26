@@ -1,0 +1,21 @@
+.navigation {
+	&__list {
+		list-style: none;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	&__item {
+		font-size: 2rem;
+		letter-spacing: .2rem;
+		text-transform: uppercase;
+		margin: 0 2rem;
+	}
+
+	&__link {
+		color: $color-dark;
+		text-decoration: none;
+		
+	}
+}

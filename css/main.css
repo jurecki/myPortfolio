@@ -8,10 +8,12 @@
 
 html {
   font-size: 62.5%;
+  background-color: #ecf0f1;
 }
 
 body {
   box-sizing: border-box;
+  position: relative;
 }
 
 body {
@@ -19,8 +21,169 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
-  color: #777;
+  color: #2c3e50;
   padding: 3rem;
   box-sizing: border-box;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 2rem;
+  box-shadow: 0 1rem 2rem rgba(44, 62, 80, 0.25);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  background-color: white;
+}
+
+.header__logo {
+  font-family: 'Russo One', sans-serif;
+  color: #3498db;
+  font-size: 3rem;
+  padding: 1rem 2rem;
+}
+
+.header__menu {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+}
+
+.navigation__list {
+  list-style: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.navigation__item {
+  font-size: 2rem;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  margin: 0 2rem;
+}
+
+.navigation__link {
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.footer {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  background-color: red;
+}
+
+.home {
+  padding-top: 6rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.home__text {
+  background-color: red;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  font-size: 2rem;
+}
+
+.home__title-small {
+  color: #2980b9;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+
+.home__title-large {
+  font-size: 5rem;
+}
+
+.home__social {
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  margin-top: 2rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.home__social i {
+  font-size: 4rem;
+  color: #2980b9;
+}
+
+.home__social i:hover {
+  color: #3498db;
+  cursor: pointer;
+}
+
+.home__picture img {
+  height: 650px;
+  object-fit: cover;
+}
+
+.about {
+  padding-top: 6rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.about__picture {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.about__picture img {
+  height: 650px;
+  object-fit: cover;
+}
+
+.about__text {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  padding-right: 2rem;
+}
+
+.about__title {
+  font-size: 3rem;
+}
+
+.about__describe {
+  font-size: 1.8rem;
+  padding: 2rem 0;
+}
+
+.courses {
+  background-color: orange;
+  height: 400px;
+}
+
+.portfolio {
+  padding-top: 6rem;
+  background-color: green;
+  height: 400px;
+}
+
+.contact {
+  padding-top: 6rem;
+  background-color: gray;
+  height: 400px;
 }
 /*# sourceMappingURL=main.css.map */
