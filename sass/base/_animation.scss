@@ -1,0 +1,86 @@
+
+@keyframes fillHtml {	
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+@keyframes fillCss {
+
+	90% {
+		transform: translateX(-5%);
+	}
+	
+	100% {
+		transform: translateX(-60%);
+	}
+}
+
+@keyframes fillJs {
+
+	20% {
+		transform: translateX(-90%);
+	}
+
+	60% {
+		transform: translateX(-90%);
+	}
+
+	80% {
+		transform: translateX(-70%);
+	}
+	
+	100% {
+		transform: translateX(-60%);
+	}
+}
+@keyframes fillReact {
+
+	20% {
+		transform: translateX(-90%);
+	}
+
+	40% {
+		transform: translateX(-90%);
+	}
+
+	60% {
+		transform: translateX(-80%);
+	}
+
+	80% {
+		transform: translateX(-80%);
+	}
+	
+	100% {
+		transform: translateX(-70%);
+	}
+}
+
+@keyframes fillGit {
+	
+	100% {
+		transform: translateX(-80%);
+	}
+}
+
+@keyframes fillNode {
+	
+	100% {
+		transform: translateX(-80%);
+	}
+}
+
+@keyframes fillNpm {
+	
+	100% {
+		transform: translateX(-80%);
+	}
+}
+
+@keyframes fillWebpack {
+	
+	100% {
+		transform: translateX(-80%);
+	}
+}

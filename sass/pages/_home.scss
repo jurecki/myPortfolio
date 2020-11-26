@@ -4,7 +4,6 @@
 	justify-content: center;
 	align-items: center;
 	&__text {
-		background-color: red;
 		flex-basis: 50%;
 		font-size: 2rem;
 	}
@@ -75,6 +74,11 @@
 	&__describe {
 		font-size: 1.8rem;
 		padding: 2rem 0;
+	}
+
+	&__btn {
+		margin: 3rem 0;
+		text-align: center;
 	}
 }
 

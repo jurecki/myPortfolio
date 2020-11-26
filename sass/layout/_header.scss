@@ -1,7 +1,8 @@
 .header {
 	position: fixed;
-	top: 0;
+	top: -20rem;
 	left:0;
+	animation: showNav 1s 3s forwards;
 	width: 100%;
 	padding:0 2rem;
 	box-shadow: 0 1rem 2rem rgba($color-dark, .25);
@@ -13,7 +14,7 @@
 		font-family: 'Russo One', sans-serif;
 		color: $color-primary;
 		font-size: 3rem;
-		padding: 1rem 2rem;
+		padding: 0.5rem 2rem;
 	}
 
 	&__menu {
@@ -21,3 +22,9 @@
 	}
 }
 
+
+@keyframes showNav {
+	100% {
+		top: 0;
+	}
+}
