@@ -200,11 +200,55 @@ body {
   animation: fillWebpack 1s forwards;
 }
 
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 40rem;
+  min-width: 25%;
+  display: inline-block;
+}
+
+.card__side {
+  height: 40rem;
+  width: 100%;
+  transition: all 1s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(44, 62, 80, 0.15);
+}
+
+.card__side--front {
+  background-color: white;
+}
+
+.card__side--back {
+  background-image: linear-gradient(#3498db, #2980b9);
+  transform: rotateY(180deg);
+}
+
+.card__side--back--1 {
+  background-image: linear-gradient(#3498db, #16a085);
+}
+
+.card:hover .card__side--front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .card__side--back {
+  transform: rotateY(0);
+}
+
 .header {
   position: fixed;
   top: -20rem;
   left: 0;
   animation: showNav 1s 3s forwards;
+  z-index: 1;
   width: 100%;
   padding: 0 2rem;
   box-shadow: 0 1rem 2rem rgba(44, 62, 80, 0.25);
@@ -214,7 +258,7 @@ body {
       justify-content: space-between;
   -ms-flex-align: center;
       align-items: center;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
 .header__logo {
@@ -250,6 +294,10 @@ body {
   letter-spacing: .2rem;
   text-transform: uppercase;
   margin: 0 2rem;
+}
+
+.navigation__item:hover {
+  border-bottom: 3px solid #2980b9;
 }
 
 .navigation__link {

@@ -11,6 +11,11 @@
 		letter-spacing: .2rem;
 		text-transform: uppercase;
 		margin: 0 2rem;
+		
+		&:hover {
+			border-bottom: 3px solid $color-primary-dark;
+		}
+		
 	}
 
 	&__link {

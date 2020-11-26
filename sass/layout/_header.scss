@@ -3,13 +3,14 @@
 	top: -20rem;
 	left:0;
 	animation: showNav 1s 3s forwards;
+	z-index: 1;
 	width: 100%;
 	padding:0 2rem;
 	box-shadow: 0 1rem 2rem rgba($color-dark, .25);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: white;
+	background-color: rgba(256,256,256,.95);
 	&__logo {
 		font-family: 'Russo One', sans-serif;
 		color: $color-primary;
