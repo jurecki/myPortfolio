@@ -22,10 +22,12 @@
 	&-primary {
 		background-image: linear-gradient(to right, $color-primary-dark, $color-secondary-dark);
 		color: $color-light;
+		border: none;
 	}
 	&-secondary {
 		background-color: $color-light;
 		color: $color-dark;
+		border: none;
 	}
 
 	&-category {

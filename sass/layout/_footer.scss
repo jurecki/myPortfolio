@@ -1,4 +1,20 @@
 .footer {
-	flex-basis: 100%;
-background-color: red;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	box-shadow: 0 1rem 2rem rgba($color-dark, .25);
+	background-color: rgba(256,256,256,.95);
+	color: $color-dark;
+	padding: 1rem 2rem;
+	p {
+		text-align: center;
+		font-size: 1.5rem;
+	}
+
+	span {
+		font-weight: 800;
+		font-size: 1.2rem;
+
+	}
 }
