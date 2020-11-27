@@ -1,3 +1,20 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
 *,
 *::after,
 *::before {
@@ -11,9 +28,29 @@ html {
   background-color: #ecf0f1;
 }
 
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
 body {
   box-sizing: border-box;
   position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 @keyframes fillHtml {
@@ -98,6 +135,18 @@ body {
   box-sizing: border-box;
 }
 
+@media only screen and (max-width: 56.25em) {
+  body {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 40.625em) {
+  body {
+    font-size: 1.5rem;
+  }
+}
+
 .heading {
   text-transform: uppercase;
   font-size: 5rem;
@@ -109,13 +158,42 @@ body {
   margin-bottom: 3rem;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .heading {
+    font-size: 4rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 40.625em) {
+  .heading {
+    font-size: 3rem;
+    letter-spacing: 1px;
+    margin-bottom: .5rem;
+  }
+}
+
 .heading-secondary {
   font-size: 4rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .heading-secondary {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 40.625em) {
+  .heading-secondary {
+    font-size: 2.5rem;
+  }
 }
 
 .btn {
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
   padding: 1.5rem 4rem;
   margin: 2rem 0;
   display: inline-block;
@@ -123,6 +201,22 @@ body {
   transition: all .2s;
   font-weight: 700;
   letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .btn {
+    margin: 1rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 40.625em) {
+  .btn {
+    margin: .5rem;
+    padding: .8rem 1.5rem;
+    font-size: 1.2rem;
+  }
 }
 
 .btn:hover {
@@ -186,6 +280,18 @@ body {
   overflow: hidden;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .progress-bar__chart {
+    width: 25rem;
+  }
+}
+
+@media only screen and (max-width: 40.625em) {
+  .progress-bar__chart {
+    width: 20rem;
+  }
+}
+
 .progress-bar__chart-html, .progress-bar__chart-css, .progress-bar__chart-js, .progress-bar__chart-react, .progress-bar__chart-node, .progress-bar__chart-npm, .progress-bar__chart-webpack, .progress-bar__chart-git {
   position: absolute;
   top: 0;
@@ -236,7 +342,6 @@ body {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 40rem;
   min-width: 25%;
   display: inline-block;
 }
@@ -252,6 +357,18 @@ body {
           backface-visibility: hidden;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(44, 62, 80, 0.15);
+}
+
+@media only screen and (max-width: 56.25em) {
+  .card__side {
+    height: 35rem;
+  }
+}
+
+@media only screen and (max-width: 40.625em) {
+  .card__side {
+    height: 25rem;
+  }
 }
 
 .card__side--front {
@@ -281,23 +398,29 @@ body {
 }
 
 .card__content {
-  margin: 2rem 2rem 4rem 2rem;
+  margin: 2rem 2rem 2rem 2rem;
   font-size: 2rem;
   text-align: center;
 }
 
-.form {
-  text-align: right;
+@media only screen and (max-width: 56.25em) {
+  .card__content {
+    margin: 1rem 1rem 1rem 1rem;
+  }
 }
 
-.form__wrapper {
-  width: 100rem;
+@media only screen and (max-width: 40.625em) {
+  .card__content {
+    margin: 0;
+  }
+}
+
+.form {
+  text-align: right;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .form__group {
@@ -305,15 +428,20 @@ body {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  width: 30%;
+  width: 100%;
   -ms-flex-pack: justify;
       justify-content: space-between;
 }
 
 .form__textarea {
-  -ms-flex-positive: 1;
-      flex-grow: 1;
+  width: 100%;
   margin-bottom: 2rem;
+}
+
+.form__submit {
+  width: 95%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .form__input, .form__textarea {
@@ -373,6 +501,13 @@ body {
   background-color: rgba(255, 255, 255, 0.95);
 }
 
+@media only screen and (max-width: 40.625em) {
+  .header {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+}
+
 .header__logo {
   font-family: 'Russo One', sans-serif;
   color: #3498db;
@@ -381,6 +516,12 @@ body {
   background-image: linear-gradient(to right, #2980b9, #16a085);
   -webkit-background-clip: text;
   color: transparent;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .header__logo {
+    font-size: 2.3rem;
+  }
 }
 
 .header__menu {
@@ -405,7 +546,6 @@ body {
 }
 
 .navigation__item {
-  font-size: 2rem;
   letter-spacing: .2rem;
   text-transform: uppercase;
   margin: 0 2rem;
@@ -443,18 +583,19 @@ body {
 }
 
 .home {
+  width: 100%;
   padding-top: 6rem;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   -ms-flex-align: center;
       align-items: center;
 }
 
 .home__text {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
 }
 
 .home__social {
@@ -471,41 +612,71 @@ body {
   color: #2980b9;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .home__social i {
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 40.625em) {
+  .home__social i {
+    font-size: 3rem;
+  }
+}
+
 .home__social i:hover {
   color: #3498db;
   cursor: pointer;
 }
 
+.home__picture {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  margin-left: 4rem;
+}
+
 .home__picture img {
-  height: 650px;
+  width: 100%;
   object-fit: cover;
 }
 
 .about {
-  padding-top: 6rem;
+  padding-top: 2rem;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
   -ms-flex-align: center;
       align-items: center;
+  width: 100%;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .about {
+    padding-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 40.625em) {
+  .about {
+    padding-top: 1rem;
+  }
 }
 
 .about__picture {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  width: 40%;
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
 
 .about__picture img {
-  height: 650px;
+  width: 100%;
   object-fit: cover;
+  object-position: top;
 }
 
 .about__text {
-  -ms-flex-positive: 1;
-      flex-grow: 1;
+  width: 60%;
   padding-right: 2rem;
 }
 

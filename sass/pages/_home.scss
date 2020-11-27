@@ -1,10 +1,12 @@
 .home {
+	width: 100%;
 	padding-top: 6rem;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
+
 	&__text {
-		flex-basis: 50%;
+		flex-basis: 60%;
 	}
 
 	&__social {
@@ -18,6 +20,15 @@
 			font-size: 4rem;
 			color: $color-primary-dark;
 
+			@include respond(tab-port) { //width < 900px
+				font-size: 3.5rem;
+			}
+		
+			@include respond(phone) { //witdh < 600px
+				font-size: 3rem;
+			}
+
+
 			&:hover {
 				color: $color-primary;
 				cursor: pointer;
@@ -26,30 +37,40 @@
 	}
 
 	&__picture {
+		flex-basis: 40%;
+		margin-left: 4rem;
 		& img {
-			height: 650px;
+			width: 100%;
 			object-fit: cover;
 		}
 	}
 }
 
 .about {
-	padding-top: 6rem;
+	padding-top: 2rem;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
+	width: 100%;
+	@include respond(tab-port) { //width < 900px
+		padding-top: 2rem;
+	}
+	@include respond(phone) { //witdh < 600px
+		padding-top: 1rem;
+	}
 
 	&__picture {
-		
-		flex-basis: 50%;
+		width: 40%;
 		align-self: flex-end;
+		
 		& img {
-			height: 650px;
+			width: 100%;
 			object-fit: cover;
+			object-position: top;
 		}
 	}
 	&__text {
-		flex-grow: 1;
+		width: 60%;
 		padding-right: 2rem;
 	}
 

@@ -20,6 +20,12 @@
 		height: 3rem;
 		border: 2px solid $color-primary-dark;
 		overflow: hidden;
+		@include respond(tab-port) { //width < 900px
+			width: 25rem;
+		}
+		@include respond(phone) { //witdh < 600px
+			width: 20rem;
+		}
 
 			&-html, &-css, &-js, &-react, &-node, &-npm, &-webpack, &-git {
 				position: absolute;
