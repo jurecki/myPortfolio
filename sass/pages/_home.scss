@@ -121,7 +121,6 @@
 				margin-bottom: 5rem;
 			}
 		}
-
 	
 
 		&__category-all:hover ~ &__item &__item-business{
@@ -153,7 +152,8 @@
 }
 
 .contact {
-	padding-top: 6rem;
-	background-color: gray;
-	height: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }

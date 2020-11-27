@@ -106,16 +106,18 @@ body {
   background-image: linear-gradient(45deg, #2980b9, #16a085);
   -webkit-background-clip: text;
   color: transparent;
+  margin-bottom: 3rem;
 }
 
 .heading-secondary {
   font-size: 4rem;
 }
 
-.btn:link, .btn:visited {
+.btn {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
+  margin: 2rem 0;
   display: inline-block;
   border-radius: 100px;
   transition: all .2s;
@@ -280,6 +282,74 @@ body {
   margin: 2rem 2rem 4rem 2rem;
   font-size: 2rem;
   text-align: center;
+}
+
+.form {
+  text-align: right;
+}
+
+.form__wrapper {
+  width: 100rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.form__group {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: 30%;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.form__textarea {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  margin-bottom: 2rem;
+}
+
+.form__input, .form__textarea {
+  font-size: 1.5rem;
+  font-family: inherit;
+  padding: 1.5rem 2rem;
+  margin: 1rem 2rem;
+  border-radius: 2px;
+  background-color: white;
+  box-shadow: 1rem 1rem 2rem rgba(44, 62, 80, 0.1);
+  border: none;
+  border-bottom: 3px solid transparent;
+  display: block;
+  transform: all .3s;
+}
+
+.form__input:focus, .form__textarea:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(44, 62, 80, 0.15);
+  border-bottom: 3px solid #2980b9;
+}
+
+.form__input:focus:invalid, .form__textarea:focus:invalid {
+  border-bottom: 3px solid #ed553d;
+}
+
+.form__label {
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  margin-top: .7rem;
+  display: block;
+  transition: all .3s;
+}
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-5rem);
 }
 
 .header {
@@ -529,8 +599,13 @@ body {
 }
 
 .contact {
-  padding-top: 6rem;
-  background-color: gray;
-  height: 400px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 /*# sourceMappingURL=main.css.map */
