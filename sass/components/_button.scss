@@ -2,7 +2,7 @@
 	text-transform: uppercase;
 	text-decoration: none;
 	text-align: center;
-	padding: 1.5rem 4rem;
+	padding: 1.5rem 2.5rem;
 	margin: 2rem 0;
 	display: inline-block;
 	border-radius: 100px;
@@ -44,7 +44,7 @@
 	}
 
 	&-category {
-		background-color: $color-primary-dark;
+		background-image: linear-gradient(125deg, $color-primary-dark, $color-secondary-dark);
 		font-size: 1.2rem;
 		padding: 1.5rem 1rem;
 		margin: 0 1rem;

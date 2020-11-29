@@ -2,7 +2,17 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 0 2rem;
+	margin: 2rem 2rem;
+
+	@include respond(tab-port) { //width < 900px
+		margin: 1.5rem 1.5rem;
+	}
+	@include respond(phone) { //witdh < 600px
+		margin: 1rem 1rem;
+	}
+	@include respond(phone-small) { //witdh < 360px
+		margin: .5rem .5rem;
+	}
 
 	&__wrapper {
 		display: flex;
@@ -10,8 +20,13 @@
 	}
 
 	&__title {
-		font-size: 2rem;
 		width: 15rem;
+		font-size: 2.2rem;
+		@include respond(tab-port) { //width < 900px
+			width: 12rem;
+			font-size: 1.5rem;
+			line-height: 3rem;
+		}
 	}
 
 	&__chart{
@@ -22,9 +37,17 @@
 		overflow: hidden;
 		@include respond(tab-port) { //width < 900px
 			width: 25rem;
+			height: 2.5rem;
 		}
 		@include respond(phone) { //witdh < 600px
+			width: 22rem;
+			height: 2.5rem;
+		
+		}
+
+		@include respond(phone-small) { //witdh < 360px
 			width: 20rem;
+			height: 2.5rem;
 		}
 
 			&-html, &-css, &-js, &-react, &-node, &-npm, &-webpack, &-git {

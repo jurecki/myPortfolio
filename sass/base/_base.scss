@@ -9,7 +9,7 @@
 html {
 	font-size: 62.5%;
 	background-color: $color-light;
-
+	scroll-behavior: smooth;
 	@include respond(tab-land) { //witdh < 1200px
 		font-size: 56.25%; // 1 rem = 9px, 9/16 = 56.25%
 	}
