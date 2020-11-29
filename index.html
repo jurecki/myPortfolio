@@ -45,12 +45,12 @@
             </div>                                  
         </div>
         <div class='home__picture'>
-            <img src='./photo/photo_2.jpg' alt='photo'/>
+            <img src='./photo/photo_2.jpg' alt='photo' loading='lazy'/>
         </div>
     </section>
     <section id='about' class='about'>
         <div class='about__picture'>
-            <img src='./photo/photo_1.jpg' alt='photo'/>
+            <img src='./photo/photo_1.jpg' alt='photo'loading='lazy'/>
         </div>
         <div class='about__text'>
             <h1 class='heading-secondary'>Hello, I Am Pawel Jurecki</h1>
@@ -162,12 +162,18 @@
             <a href='#' class='portfolio__category-design btn btn-category'>Design & Photography</a>
             <a href='#' class='portfolio__category-cars btn btn-category'>Cars & Motorcycles</a>
             <div class='portfolio__item'>
-                <img class='portfolio__item-cars' src='./photo/example-1.png' alt=''>
-                <img class='portfolio__item-design' src='./photo/example-2.png' alt=''>
-                <img class='portfolio__item-business' src='./photo/example-3.png' alt=''>
-                <img class='portfolio__item-cars' src='./photo/example-4.png' alt=''>
-                <img class='portfolio__item-design' src='./photo/example-5.png' alt=''>
-                <img class='portfolio__item-business' src='./photo/example-6.png' alt=''>
+                <img class='portfolio__item-cars' src='./photo/example-1.png' alt='' loading='lazy'>
+
+                <picture>
+                    <source srcset='./photo/example-2.jp2' type="image/jp2"> <!-- safari -->
+                    <source srcset='./photo/example-2.png' type="image/png"> <!-- multiple -->
+                    <img class='portfolio__item-cars' src="./photo/example-2.png" alt="aa"> <!-- default -->
+                </picture>
+
+                <img class='portfolio__item-business' src='./photo/example-3.jp2' alt='' loading='lazy'>
+                <img class='portfolio__item-cars' src='./photo/example-4.jp2' alt='' loading='lazy'>
+                <img class='portfolio__item-design' src='./photo/example-5.jp2' alt='' loading='lazy'>
+                <img class='portfolio__item-business' src='./photo/example-6.jp2' alt='' loading='lazy'>
             </div>
         </div>
      </section>
