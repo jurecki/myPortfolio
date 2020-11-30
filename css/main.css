@@ -897,7 +897,7 @@ body {
 }
 
 .portfolio__content img {
-  width: 30%;
+  width: 450px;
   visibility: hidden;
   box-shadow: 1.5rem 1.5rem 1rem rgba(44, 62, 80, 0.15);
 }

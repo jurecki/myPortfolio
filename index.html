@@ -45,12 +45,20 @@
             </div>                                  
         </div>
         <div class='home__picture'>
-            <img src='./photo/photo_2.jpg' alt='photo' loading='lazy'/>
+            <picture >
+                <source srcset='./photo/jp2/photo_2.jp2' type="image/jp2"> <!-- safari -->
+                <source srcset='./photo/webP/photo_2.webp' type="image/webp"> <!-- chrome -->
+                <img src="./photo/png/photo_2.png" alt="photo2" loading='lazy'> <!-- default -->
+            </picture>
         </div>
     </section>
     <section id='about' class='about'>
         <div class='about__picture'>
-            <img src='./photo/photo_1.jpg' alt='photo'loading='lazy'/>
+            <picture >
+                <source srcset='./photo/jp2/photo_1.jp2' type="image/jp2"> <!-- safari -->
+                <source srcset='./photo/webP/photo_1.webp' type="image/webp"> <!-- chrome -->
+                <img src="./photo/png/photo_1.png" alt="photo1" loading='lazy'> <!-- default -->
+            </picture>
         </div>
         <div class='about__text'>
             <h1 class='heading-secondary'>Hello, I Am Pawel Jurecki</h1>
@@ -121,7 +129,11 @@
         <div class='courses__content'>
             <div class='card'>
                 <div class='card__side card__side--front '>
-                    <img class='courses__logo' src='./photo/kodilla_logo.png' alt='kodilla_szkola_programowania'/>
+                    <picture class='courses__logo'>
+                        <source srcset='./photo/jp2/kodilla_logo.jp2' type="image/jp2"> <!-- safari -->
+                        <source srcset='./photo/webP/kodilla_logo.webp' type="image/webp"> <!-- chrome -->
+                        <img src="./photo/png/kodilla_logo.png" alt="kodilla_logo" loading='lazy'> <!-- default -->
+                    </picture>
                 </div>
                 <div class='card__side card__side--back'>
                     <p class='card__content'>HTML, CSS, RWD, Bootstrap, Git, JavaScript ES6, AJAX, Node, React, Express, Redux, React Router, MongoDB, Jira, Kanban, NPM, Webpack</p>
@@ -130,7 +142,11 @@
             </div>
             <div class='card'>
                 <div class='card__side card__side--front '>
-                    <img class='courses__logo' src='./photo/coderscamp_min_1030x578.jpg' alt='coders_camp_szkola_programowania'/>
+                    <picture class='courses__logo'>
+                        <source srcset='./photo/jp2/coderscamp.jp2' type="image/jp2"> <!-- safari -->
+                        <source srcset='./photo/webP/coderscamp.webp' type="image/webp"> <!-- chrome -->
+                        <img src="./photo/png/coderscamp.png" alt="coderscamp_logo" loading='lazy'> <!-- default -->
+                    </picture>
                 </div>
                 <div class='card__side card__side--back card__side--back--1'>
                     <p class='card__content'>
@@ -141,7 +157,11 @@
             </div>
             <div class='card'>
                 <div class='card__side card__side--front'>
-                    <img class='courses__logo' src='./photo/samuraj_logo.png' alt='sammuraj_programowania'/>
+                    <picture class='courses__logo'>
+                        <source srcset='./photo/jp2/samuraj_logo.jp2' type="image/jp2"> <!-- safari -->
+                        <source srcset='./photo/webP/samuraj_logo.webp' type="image/webp"> <!-- chrome -->
+                        <img src="./photo/png/samuraj_logo.png" alt="samuraj_logo" loading='lazy'> <!-- default -->
+                    </picture>
                 </div>
                 <div class='card__side card__side--back'>
                     <p class='card__content'>
@@ -162,18 +182,36 @@
             <a href='#' class='portfolio__category-design btn btn-category'>Design & Photography</a>
             <a href='#' class='portfolio__category-cars btn btn-category'>Cars & Motorcycles</a>
             <div class='portfolio__item'>
-                <img class='portfolio__item-cars' src='./photo/example-1.png' alt='' loading='lazy'>
-
-                <picture>
-                    <source srcset='./photo/example-2.jp2' type="image/jp2"> <!-- safari -->
-                    <source srcset='./photo/example-2.png' type="image/png"> <!-- multiple -->
-                    <img class='portfolio__item-cars' src="./photo/example-2.png" alt="aa"> <!-- default -->
+                <picture class='portfolio__item-design'>
+                    <source srcset='./photo/jp2/example-1.jp2' type="image/jp2"> <!-- safari -->
+                    <source srcset='./photo/webP/example-1.webp' type="image/webP"> <!-- chrome -->
+                    <img class='portfolio__item-design' src="./photo/png/example-1.png" alt="example1" loading='lazy'> <!-- default -->
                 </picture>
-
-                <img class='portfolio__item-business' src='./photo/example-3.jp2' alt='' loading='lazy'>
-                <img class='portfolio__item-cars' src='./photo/example-4.jp2' alt='' loading='lazy'>
-                <img class='portfolio__item-design' src='./photo/example-5.jp2' alt='' loading='lazy'>
-                <img class='portfolio__item-business' src='./photo/example-6.jp2' alt='' loading='lazy'>
+                <picture class='portfolio__item-cars'>
+                    <source srcset='./photo/jp2/example-2.jp2' type="image/jp2"> <!-- safari -->
+                    <source srcset='./photo/webP/example-2.webp' type="image/webP"> <!-- chrome -->
+                    <img class='portfolio__item-cars' src="./photo/png/example-2.png" alt="example2" loading='lazy'> <!-- default -->
+                </picture>
+                <picture class='portfolio__item-business'>
+                    <source srcset='./photo/jp2/example-3.jp2' type="image/jp2"> <!-- safari -->
+                    <source srcset='./photo/webP/example-3.webp' type="image/webp"> <!-- chrome -->
+                    <img class='portfolio__item-business' src="./photo/png/example-2.png" alt="example3" loading='lazy'> <!-- default -->
+                </picture>
+                <picture class='portfolio__item-cars'>
+                    <source srcset='./photo/jp2/example-4.jp2' type="image/jp2"> <!-- safari -->
+                    <source srcset='./photo/webP/example-4.webp' type="image/webp"> <!-- chrome -->
+                    <img class='portfolio__item-cars' src="./photo/png/example-4.png" alt="example4" loading='lazy'> <!-- default -->
+                </picture>
+                <picture class='portfolio__item-design'>
+                    <source srcset='./photo/jp2/example-5.jp2' type="image/jp2"> <!-- safari -->
+                    <source srcset='./photo/webP/example-5.webp' type="image/webp"> <!-- chrome -->
+                    <img class='portfolio__item-design' src="./photo/png/example-5.png" alt="example5" loading='lazy'> <!-- default -->
+                </picture>
+                <picture class='portfolio__item-business'>
+                    <source srcset='./photo/jp2/example-6.jp2' type="image/jp2"> <!-- safari -->
+                    <source srcset='./photo/webP/example-6.webp' type="image/webp"> <!-- chrome -->
+                    <img  class='portfolio__item-business' src="./photo/png/example-6.png" alt="example6" loading='lazy'> <!-- default -->
+                </picture>
             </div>
         </div>
      </section>
