@@ -126,6 +126,16 @@ body {
   }
 }
 
+@font-face {
+  src: url(fonts/RussoOne-Regular.ttf);
+  font-family: Russo One;
+}
+
+@font-face {
+  src: url(fonts/Lato-Regular.ttf);
+  font-family: Lato;
+}
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
