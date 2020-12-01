@@ -157,6 +157,9 @@
 				width: 450px;
 				visibility: hidden;
 				box-shadow: 1.5rem 1.5rem 1rem rgba($color-dark, 0.15);
+				@include respond(phone-small) { 
+					width: 300px;
+				}
 			}
 		}
 

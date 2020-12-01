@@ -912,6 +912,12 @@ body {
   box-shadow: 1.5rem 1.5rem 1rem rgba(44, 62, 80, 0.15);
 }
 
+@media only screen and (max-width: 22.5em) {
+  .portfolio__content img {
+    width: 300px;
+  }
+}
+
 .portfolio__item {
   display: -ms-flexbox;
   display: flex;
