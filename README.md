@@ -24,6 +24,6 @@ $ npm watch
 ```
 
 ## Sources
-Combining the BEM methodology with Sass inspired by Samuraj Programowania  tutorial by  https://www.udemy.com/course/zaawansowane-projekty-w-css-i-javascript 
+Combining the BEM methodology with Sass inspired by Samuraj Programowania  tutorial by  https://www.udemy.com/course/zaawansowane-projekty-w-css-i-javascript /
 Using RWD with mixin and rem inspired by Jonas Schmedtmann tutorial by https://www.udemy.com/course/advanced-css-and-sass/ 
 Photos 
