@@ -1,0 +1,220 @@
+.home {
+	width: 100%;
+	padding-top: 6rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@include respond(phone-small) { 
+		padding-top: 1rem;
+	}
+
+	&__text {
+		flex-basis: 60%;
+	}
+
+	&__social {
+		display: flex;
+		width: 50%;
+		margin-top: 2rem;
+		justify-content: space-around;
+	
+
+		& i {
+			font-size: 4rem;
+			background-image: linear-gradient(to right, $color-primary-dark, $color-secondary-dark);
+			background-clip: text;
+			-webkit-background-clip: text;
+			color: transparent;
+
+			@include respond(tab-port) { //width < 900px
+				font-size: 3.5rem;
+			}
+		
+			@include respond(phone) { //witdh < 600px
+				font-size: 3rem;
+			}
+			@include respond(phone-small) { //witdh < 360px
+				font-size: 2rem;
+			}
+
+
+			&:hover {
+				color: $color-primary;
+				cursor: pointer;
+			}
+		}
+	}
+
+	&__picture {
+		flex-basis: 40%;
+		margin-left: 4rem;
+		& img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+.about {
+	padding-top: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	@include respond(tab-port) { //width < 900px
+		padding-top: 2rem;
+	}
+	@include respond(phone) { //witdh < 600px
+		padding-top: 1rem;
+	}
+
+	&__picture {
+		min-width: 30%;
+
+		@include respond(phone) { //witdh < 600px
+			min-width: 0%;
+			width: 0;
+		}
+
+		@include respond(phone-small) { //witdh < 600px
+			min-width: 0%;
+			width: 0;
+		}
+		
+		& img {
+			width: 100%;
+			object-fit: cover;
+			object-position: top;
+		}
+	}
+	&__text {
+		flex-grow: 1;
+		padding-right: 2rem;
+	}
+
+	&__describe {
+		margin-bottom: 2rem;
+	}
+
+	&__btn {
+		margin: 1rem 0;
+		text-align: center;
+	}
+}
+
+.courses{
+	&__title {
+		margin: 2rem 0;
+		text-align: center;
+	}
+
+	&__content {
+		margin: 3rem 0;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		@include respond(phone) { //witdh < 600px
+			flex-direction: column;
+		
+		}
+	}
+	& img {
+		position: absolute;
+		top:50%;
+		left:50%;
+		transform: translate(-50%,-50%);
+		margin: auto auto;
+		width: 75%;
+	}
+}
+
+.portfolio {
+		&__title {
+			margin: 4rem 0;
+			text-align: center;
+		}
+	
+		&__content {
+			margin: 4rem 0;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-items: center;
+
+			a {
+				width: 20%;
+				margin-bottom: 5rem;	
+
+				@include respond(phone) { 
+					width: 42%;
+				}
+			}
+
+			img {
+				width: 450px;
+				visibility: hidden;
+				box-shadow: 1.5rem 1.5rem 1rem rgba($color-dark, 0.15);
+				@include respond(phone-small) { 
+					width: 300px;
+				}
+			}
+		}
+
+		&__item {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			height: 0;
+			
+			& img {
+				margin-bottom: 5rem;
+			}
+		}
+
+		&__category-all:hover ~ &__item,
+		&__category-business:hover ~ &__item,
+		&__category-cars:hover ~ &__item,
+		&__category-design:hover ~ &__item
+		{
+			height: 100%;
+		}
+	
+
+		&__category-all:hover ~ &__item &__item-business{
+			visibility: visible;
+		}
+
+		&__category-all:hover ~ &__item &__item-cars{
+			visibility: visible;
+		}
+
+		&__category-all:hover ~ &__item &__item-design{
+			visibility: visible;
+		}
+
+		&__category-business:hover ~ &__item &__item-business{
+			visibility: visible;
+			order: -1;
+		}
+
+		&__category-cars:hover ~ &__item &__item-cars{
+			visibility: visible;
+			order: -1;
+		}
+		&__category-design:hover ~ &__item &__item-design{
+			visibility: visible;
+			order: -1;
+		}
+
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 15rem;
+}

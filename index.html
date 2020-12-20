@@ -6,13 +6,246 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>CodersCamp | Projekt 1 - HTML i CSS</title>
-    <meta name="description" content="CodersCamp to darmowy, otwarty kurs programowania webowego we Wrocławiu. Sprawdź, czego nauczysz się na CodersCamp i spróbuj swoich sił w branży IT!">
-
+    <meta name="description" content="myPorfolio">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">   -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css"/>
 </head>
 
 <body>
-
-<p>CodersCamp - projekt 1. Tutaj możesz zacząć swoją zabawę!</p>
-
+    <div class='mobile-nav'>
+        <i class="fa fa-bars mobile-nav-enable"></i> 
+        <i class="fa fa-times mobile-nav-disable"></i>
+    </div>
+    <div class='header'>
+        <div class='header__logo'>&lt; JURECKI/ &gt;</div>
+        <div class='header__menu'>
+            <nav class='navigation'>
+                <ul class='navigation__list'>
+                    <li class='navigation__item'><a href='#about' class='navigation__link'>about</a></li>
+                    <li class='navigation__item'><a href='#courses' class='navigation__link'>courses</a></li>
+                    <li class='navigation__item'><a href='#portfolio' class='navigation__link'>portfolio</a></li>
+                    <li class='navigation__item'><a href='#contact' class='navigation__link'>contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <section id='home' class='home'>
+        <div class='home__text'>
+            <h1 class='heading'>welcome!</h1>
+            <h2 class='heading-secondary'>I Am Web Developer</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quas natus blanditiis dolorem delectus distinctio possimus obcaecati ipsam illum.</p>
+            <div class='home__social'>
+                <i class="fa fa-github"></i>
+                <i class="fa fa-linkedin"></i>
+                <i class="fa fa-twitter-square"></i>
+                <i class="fa fa-facebook"></i>
+            </div>                                  
+        </div>
+        <div class='home__picture'>
+            <picture >
+                <source srcset='./photo/jp2/photo_2.jp2' type="image/jp2"> <!-- safari -->
+                <source srcset='./photo/webP/photo_2.webp' type="image/webp"> <!-- chrome -->
+                <img src="./photo/png/photo_2.png" alt="photo2" loading='lazy'> <!-- default -->
+            </picture>
+        </div>
+    </section>
+    <section id='about' class='about'>
+        <div class='about__picture'>
+            <picture >
+                <source srcset='./photo/jp2/photo_1.jp2' type="image/jp2"> <!-- safari -->
+                <source srcset='./photo/webP/photo_1.webp' type="image/webp"> <!-- chrome -->
+                <img src="./photo/png/photo_1.png" alt="photo1" loading='lazy'> <!-- default -->
+            </picture>
+        </div>
+        <div class='about__text'>
+            <h1 class='heading-secondary'>Hello, I Am Pawel Jurecki</h1>
+            <p class='about__describe'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae reprehenderit, iure mollitia aut accusantium rerum blanditiis assumenda ipsum, temporibus velit culpa magnam non enim possimus eum omnis harum error.</p>
+            <div class='about__skills'>
+                <div class='progress-bar'>
+                <div class='progress-bar__wrapper'>
+                    <div class='progress-bar__title'>HTML</div>
+                    <div class='progress-bar__chart'>
+                        <div class='progress-bar__chart-html'></div>
+                    </div>
+                </div>
+                <div class='progress-bar__wrapper'>
+                    <div class='progress-bar__title'>CSS / Sass</div>
+                    <div class='progress-bar__chart'>
+                        <div class='progress-bar__chart-css'></div>
+                    </div>
+                </div>
+                <div class='progress-bar__wrapper'>
+                    <div class='progress-bar__title'>JavaScript</div>
+                    <div class='progress-bar__chart'>
+                        <div class='progress-bar__chart-js'></div>
+                    </div>
+                </div>
+                <div class='progress-bar__wrapper'>
+                    <div class='progress-bar__title'>React</div>
+                    <div class='progress-bar__chart'>
+                        <div class='progress-bar__chart-react'></div>
+                    </div>
+                </div>
+                <div class='progress-bar__wrapper'>
+                    <div class='progress-bar__title'>Git</div>
+                    <div class='progress-bar__chart'>
+                        <div class='progress-bar__chart-git'></div>
+                    </div>
+                </div>
+                <div class='progress-bar__wrapper'>
+                    <div class='progress-bar__title'>NodeJS</div>
+                    <div class='progress-bar__chart'>
+                        <div class='progress-bar__chart-node'></div>
+                    </div>
+                </div>
+                <div class='progress-bar__wrapper'>
+                    <div class='progress-bar__title'>NPM</div>
+                    <div class='progress-bar__chart'>
+                        <div class='progress-bar__chart-npm'></div>
+                    </div>
+                </div>
+                <div class='progress-bar__wrapper'>
+                    <div class='progress-bar__title'>Webpack</div>
+                    <div class='progress-bar__chart'>
+                        <div class='progress-bar__chart-webpack'></div>
+                    </div>
+                </div>
+                </div>
+            
+            </div>
+            <div class='about__btn'>
+                <a href='#' class='btn btn-primary'>Download CV</a>
+            </div>
+           
+        </div>
+    </section>
+    <section id='courses' class='courses'>
+        <div class='courses__title '>
+            <h1 class='heading'>my courses</h1>
+        </div>
+        <div class='courses__content'>
+            <div class='card'>
+                <div class='card__side card__side--front '>
+                    <picture class='courses__logo'>
+                        <source srcset='./photo/jp2/kodilla_logo.jp2' type="image/jp2"> <!-- safari -->
+                        <source srcset='./photo/webP/kodilla_logo.webp' type="image/webp"> <!-- chrome -->
+                        <img src="./photo/png/kodilla_logo.png" alt="kodilla_logo" loading='lazy'> <!-- default -->
+                    </picture>
+                </div>
+                <div class='card__side card__side--back'>
+                    <p class='card__content'>HTML, CSS, RWD, Bootstrap, Git, JavaScript ES6, AJAX, Node, React, Express, Redux, React Router, MongoDB, Jira, Kanban, NPM, Webpack</p>
+                    <a href='#' class='btn btn-secondary'>show certificate</a>
+                </div>
+            </div>
+            <div class='card'>
+                <div class='card__side card__side--front '>
+                    <picture class='courses__logo'>
+                        <source srcset='./photo/jp2/coderscamp.jp2' type="image/jp2"> <!-- safari -->
+                        <source srcset='./photo/webP/coderscamp.webp' type="image/webp"> <!-- chrome -->
+                        <img src="./photo/png/coderscamp.png" alt="coderscamp_logo" loading='lazy'> <!-- default -->
+                    </picture>
+                </div>
+                <div class='card__side card__side--back card__side--back--1'>
+                    <p class='card__content'>
+                        HTML,  CSS, JavaScript, TypeScript, Node.js, REST API, React, wzorce projektowe i architektura oprogramowania, Architektura w React.js i Redux.
+                    </p>
+                    <a href='#' class='btn btn-secondary'>show certificate</a>
+                </div>
+            </div>
+            <div class='card'>
+                <div class='card__side card__side--front'>
+                    <picture class='courses__logo'>
+                        <source srcset='./photo/jp2/samuraj_logo.jp2' type="image/jp2"> <!-- safari -->
+                        <source srcset='./photo/webP/samuraj_logo.webp' type="image/webp"> <!-- chrome -->
+                        <img src="./photo/png/samuraj_logo.png" alt="samuraj_logo" loading='lazy'> <!-- default -->
+                    </picture>
+                </div>
+                <div class='card__side card__side--back'>
+                    <p class='card__content'>
+                        Front-end advanced in 15 days, Programming in Java Script, Basic React, Node.js, Express i MongoDB
+                    </p>
+                    <a href='#' class='btn btn-secondary'>show certificate</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id='portfolio' class='portfolio'> 
+        <div class='portfolio__title '>
+            <h1 class='heading'>portfolio</h1>
+        </div>
+        <div class='portfolio__content'>
+            <a href='#' class='portfolio__category-all btn btn-category'>All</a>
+            <a href='#' class='portfolio__category-business btn btn-category'>Business & Services</a>
+            <a href='#' class='portfolio__category-design btn btn-category'>Design & Photography</a>
+            <a href='#' class='portfolio__category-cars btn btn-category'>Cars & Motorcycles</a>
+            <div class='portfolio__item'>
+                <picture class='portfolio__item-design'>
+                    <source srcset='./photo/jp2/example-1.jp2' type="image/jp2"> <!-- safari -->
+                    <source srcset='./photo/webP/example-1.webp' type="image/webP"> <!-- chrome -->
+                    <img class='portfolio__item-design' src="./photo/png/example-1.png" alt="example1" loading='lazy'> <!-- default -->
+                </picture>
+                <picture class='portfolio__item-cars'>
+                    <source srcset='./photo/jp2/example-2.jp2' type="image/jp2"> <!-- safari -->
+                    <source srcset='./photo/webP/example-2.webp' type="image/webP"> <!-- chrome -->
+                    <img class='portfolio__item-cars' src="./photo/png/example-2.png" alt="example2" loading='lazy'> <!-- default -->
+                </picture>
+                <picture class='portfolio__item-business'>
+                    <source srcset='./photo/jp2/example-3.jp2' type="image/jp2"> <!-- safari -->
+                    <source srcset='./photo/webP/example-3.webp' type="image/webp"> <!-- chrome -->
+                    <img class='portfolio__item-business' src="./photo/png/example-2.png" alt="example3" loading='lazy'> <!-- default -->
+                </picture>
+                <picture class='portfolio__item-cars'>
+                    <source srcset='./photo/jp2/example-4.jp2' type="image/jp2"> <!-- safari -->
+                    <source srcset='./photo/webP/example-4.webp' type="image/webp"> <!-- chrome -->
+                    <img class='portfolio__item-cars' src="./photo/png/example-4.png" alt="example4" loading='lazy'> <!-- default -->
+                </picture>
+                <picture class='portfolio__item-design'>
+                    <source srcset='./photo/jp2/example-5.jp2' type="image/jp2"> <!-- safari -->
+                    <source srcset='./photo/webP/example-5.webp' type="image/webp"> <!-- chrome -->
+                    <img class='portfolio__item-design' src="./photo/png/example-5.png" alt="example5" loading='lazy'> <!-- default -->
+                </picture>
+                <picture class='portfolio__item-business'>
+                    <source srcset='./photo/jp2/example-6.jp2' type="image/jp2"> <!-- safari -->
+                    <source srcset='./photo/webP/example-6.webp' type="image/webp"> <!-- chrome -->
+                    <img  class='portfolio__item-business' src="./photo/png/example-6.png" alt="example6" loading='lazy'> <!-- default -->
+                </picture>
+            </div>
+        </div>
+     </section>
+     <section class='contact' id='contact'>
+                    <h2 class='heading'>
+                        contact me
+                    </h2>
+                  
+                    <form action='' class='form'>
+                 
+                            <div class='form__group'>
+                                <input type='text' class='form__input' placeholder='Full Name' id='name' autocomplete="off" required>
+                                <label for='name' class='form__label'>Full Name</label>
+                                <input type='email' class='form__input' placeholder='Email adress' id='email' autocomplete="off" required>
+                                <label for='name' class='form__label'>Email adress</label>
+                            </div>
+                            <div class='form__group'>
+                                <input type='text' class='form__input' placeholder='Subject' id='subject' autocomplete="off">
+                                <label for='subject' class='form__label'>Subject</label>
+                            </div>
+                        
+                            <textarea rows=12 class='form__textarea' placeholder='Your Meassage Here....' id='description' autocomplete="off" required>
+                            </textarea>
+                            <div class='form__submit'>
+                                <button class='btn btn-primary' type='submit' value='send message' name='submit'>Send Message</button>
+                            </div>
+                        
+                    </form>
+        </div>
+       
+    </section>
+    <footer class='footer'>
+        <p>Copyright © 2020  <span>&lt; JURECKI/ &gt;</span> All rights reserved.</p>
+    </footer>
 </body>
 </html>
+ 

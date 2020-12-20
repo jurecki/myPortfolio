@@ -1,0 +1,54 @@
+.btn {
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	padding: 1.5rem 2.5rem;
+	margin: 2rem 0;
+	display: inline-block;
+	border-radius: 100px;
+	transition: all .2s;
+	font-weight: 700;
+	letter-spacing: 2px;
+
+	@include respond(tab-port) { //width < 900px
+		margin: 1rem;
+		padding: 1rem 1.5rem;
+		font-size: 1.5rem;
+	}
+
+	@include respond(phone) { //witdh < 600px
+		margin: .5rem;
+		padding: .8rem 1.5rem;
+		font-size: 1.2rem;
+	}
+
+	&:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 1rem 2rem rgba($color-dark, 0.2);
+	}
+
+	&:active {
+		transform: translateY(-1px);
+		box-shadow: 0 1rem 1rem rgba($color-dark, 0.2);
+	}
+
+	&-primary {
+		background-image: linear-gradient(to right, $color-primary-dark, $color-secondary-dark);
+		color: $color-light;
+		border: none;
+	}
+	&-secondary {
+		background-color: $color-light;
+		color: $color-dark;
+		border: none;
+	}
+
+	&-category {
+		background-image: linear-gradient(125deg, $color-primary-dark, $color-secondary-dark);
+		font-size: 1.2rem;
+		padding: 1.5rem 1rem;
+		margin: 0 1rem;
+		color: $color-light;
+		text-align: center;
+	}
+}
